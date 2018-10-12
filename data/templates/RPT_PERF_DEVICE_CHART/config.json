@@ -1,0 +1,27 @@
+{
+    "name": "RPT_PERF_DEVICE_CHART",
+    "recipe": "chrome-pdf",
+    "shortid": "HyD8x3_5m",
+    "engine": "handlebars",
+    "data": null,
+    "xlsxTemplate": {
+        "shortid": "BkJt9tnql"
+    },
+    "modificationDate": {
+        "$$date": 1539237122274
+    },
+    "_id": "1TcZIS7UynFjGdfw",
+    "$entitySet": "templates",
+    "scripts": [
+        {
+            "shortid": "BkgO3oOcX"
+        }
+    ],
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    },
+    "chrome": {
+        "scale": 1
+    },
+    "pdfOperations": []
+}

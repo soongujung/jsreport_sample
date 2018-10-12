@@ -1,0 +1,33 @@
+
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <style>
+        {#asset perf_device_styles.css @encoding=utf8}
+    </style>   
+</head>
+    <body>
+        <div class="device-box">
+            {{#each lookup_table_chart as |value key|}}       {{!-- value : obj, key : DEVICE,INDIC --}}
+            <table cellpadding="0" cellspacing="0">
+                <tr class="heading">
+                    <td>장비 유형</td>
+                    <td>장비명</td> 
+                    <td>날짜</td>
+                    <td>지표</td>
+                </tr>
+                {{#each value as |subValue subKey|}}    {{!-- subValue : arr, subKey : MCH_NM --}}
+                    {{#each subValue}}
+                    <tr>
+                        <td>{{MCH_TYPE_NM}}</td>
+                        <td>{{MCH_NM}}</td>
+                        <td>{{REG_DT}}</td>
+                        <td>{{INDIC_TYPE}}</td>
+                    </tr>
+                    {{/each}}
+                {{/each}}
+            </table>    
+            {{/each}}
+        </div>
+    </body>
+</html>

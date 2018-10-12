@@ -1,0 +1,28 @@
+{
+    "name": "PerfDeviceReport",
+    "recipe": "chrome-pdf",
+    "shortid": "BkMrFVn9Q",
+    "engine": "handlebars",
+    "data": null,
+    "xlsxTemplate": {
+        "shortid": "BkJt9tnql"
+    },
+    "modificationDate": {
+        "$$date": 1539237175551
+    },
+    "scripts": [
+        {
+            "shortid": "BkgO3oOcX"
+        }
+    ],
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    },
+    "chrome": {
+        "scale": 1,
+        "printBackground": true
+    },
+    "pdfOperations": [],
+    "_id": "X7Ue6QfGTd3W6Ime",
+    "$entitySet": "templates"
+}
