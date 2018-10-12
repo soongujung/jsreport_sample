@@ -2,18 +2,17 @@
   "extensions": {
     "authentication": {
       "cookieSession": {
-        "secret": "netcruz"
+        "secret": "<your strong secret here>"
       },
       "admin": {
-        "username": "m_user",
-        "password": "nms12345"
+        "username": "admin",
+        "password": "password"
       },
-      "enabled": true
+      "enabled": false
     },
     "scripts": {
       "timeout": 40000,
-      "strategy": "http-server",
-      "allowedModules":["request","mysql"]
+      "strategy": "http-server"
     },
     "sample-template": {
       "createSamples": true

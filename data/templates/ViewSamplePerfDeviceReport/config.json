@@ -1,0 +1,22 @@
+{
+    "shortid": "BJIShQA5Q",
+    "name": "ViewSamplePerfDeviceReport",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "modificationDate": {
+        "$$date": 1539355065522
+    },
+    "_id": "gVNAGMqCdIBYZ5YF",
+    "$entitySet": "templates",
+    "data": {
+        "shortid": "B1m3nmR57"
+    },
+    "scripts": [
+        {
+            "shortid": "S1tM1VR97"
+        }
+    ]
+}

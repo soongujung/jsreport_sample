@@ -9,6 +9,7 @@
     "entryPoint": "server.js"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
     "jsreport": "2.2.0",
     "jsreport-client": "^1.0.0",
     "mysql": "^2.16.0",
