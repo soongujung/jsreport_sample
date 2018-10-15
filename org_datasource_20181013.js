@@ -1,4 +1,3 @@
-const fs = require('fs');
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
@@ -154,24 +153,39 @@ function loadLookUpGrid(data){
         //     Router,CPU : [1,4,9,16,25,36],
         //     Router,MEM : [2,3,5,6,7,8,9],
         // }
+        //
         
         for(var pk in lookup_table){
             var obj_groupby_mch = groupBy(lookup_table[pk], 'MCH_ID');
             obj_map[pk] = Object.keys(obj_groupby_mch);
+            console.log('obj_groupby_mch :: ' + JSON.stringify(obj_groupby_mch));
+            console.log('Object.keys(...) :: ' + JSON.stringify(Object.keys(obj_groupby_mch)));
+            // console.log('obj_map :: ' + JSON.stringify(obj_map));
         }
+        console.log('obj_map :: ' + JSON.stringify(obj_map));
         
         for(var pk in obj_map){
             var mch_ids = obj_map[pk];
             var obj_groupby_mch = groupBy(lookup_table[pk], 'MCH_ID');
+            console.log('mch_ids :: ' + mch_ids);
             for(var i in mch_ids){
                 var arr_mch_data = obj_groupby_mch[mch_ids[i]];
+                // console.log('TYPE_OF arr_mch_data :: ' + typeof(arr_mch_data) + '');
+                // console.log('mch_id :: ' + typeof(mch_id));
+                // console.log('pk, mch_id :: ' + '(' + pk + ',' + mch_ids[i] + ')');
+                console.log('TYPE_OF arr_mch_data :: ' + typeof(arr_mch_data));
+                console.log('mch_ids[i] :: ' + mch_ids[i]);
+                // var max = arr_mch_data.reduce(function(ret_val, current){
+                //   return ret_val > current ? ret_val : current; 
+                // });
+                // console.log('<MCH_ID, MAX> :: ' + mch_id + ', ' + max);
             }
         }
     }
 
     var data = JSON.stringify(lookup_table);
     console.log('=== MERGED DATA === (BEGIN)');
-    fs.writeFileSync('./lookup_data.json', data);
+    console.log(data);
     console.log('=== MERGED DATA === (END)');
     
     console.log('=== MAP DATA === (BEGIN)');
@@ -311,14 +325,4 @@ function getMappedData(data){
     
     return lookup_table;
 }
-
-
-
-
-
-
-
-
-
-
 
